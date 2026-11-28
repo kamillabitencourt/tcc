@@ -1,0 +1,422 @@
+[debug] [2026-06-18T03:26:05.682Z] ----------------------------------------------------------------------
+[debug] [2026-06-18T03:26:05.684Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\kamil\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only functions
+[debug] [2026-06-18T03:26:05.685Z] CLI Version:   15.21.0
+[debug] [2026-06-18T03:26:05.685Z] Platform:      win32
+[debug] [2026-06-18T03:26:05.685Z] Node Version:  v22.15.0
+[debug] [2026-06-18T03:26:05.685Z] Detected Agent: unknown
+[debug] [2026-06-18T03:26:05.685Z] Time:          Thu Jun 18 2026 00:26:05 GMT-0300 (Horário Padrão de Brasília)
+[debug] [2026-06-18T03:26:05.686Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-06-18T03:26:07.885Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-06-18T03:26:07.885Z] > authorizing via signed-in user (kamillabitencourt18@gmail.com)
+[debug] [2026-06-18T03:26:07.885Z] [iam] checking project guiasense-9de16 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2026-06-18T03:26:07.886Z] Checked if tokens are valid: true, expires at: 1781755705874
+[debug] [2026-06-18T03:26:07.887Z] Checked if tokens are valid: true, expires at: 1781755705874
+[debug] [2026-06-18T03:26:07.887Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/guiasense-9de16:testIamPermissions [none]
+[debug] [2026-06-18T03:26:07.887Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/guiasense-9de16:testIamPermissions  x-goog-user-project=guiasense-9de16
+[debug] [2026-06-18T03:26:07.887Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/guiasense-9de16:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2026-06-18T03:26:08.860Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/guiasense-9de16:testIamPermissions 200
+[debug] [2026-06-18T03:26:08.861Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/guiasense-9de16:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2026-06-18T03:26:08.861Z] Checked if tokens are valid: true, expires at: 1781755705874
+[debug] [2026-06-18T03:26:08.861Z] Checked if tokens are valid: true, expires at: 1781755705874
+[debug] [2026-06-18T03:26:08.861Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/guiasense-9de16/serviceAccounts/guiasense-9de16@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2026-06-18T03:26:08.862Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/guiasense-9de16/serviceAccounts/guiasense-9de16@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2026-06-18T03:26:09.763Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/guiasense-9de16/serviceAccounts/guiasense-9de16@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2026-06-18T03:26:09.763Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/guiasense-9de16/serviceAccounts/guiasense-9de16@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[info] 
+[info] === Deploying to 'guiasense-9de16'...
+[info] 
+[info] i  deploying functions 
+[info] Running command: npm --prefix "$RESOURCE_DIR" run lint
+[info] +  functions: Finished running predeploy script. 
+[debug] [2026-06-18T03:26:10.490Z] Checked if tokens are valid: true, expires at: 1781755705874
+[debug] [2026-06-18T03:26:10.490Z] Checked if tokens are valid: true, expires at: 1781755705874
+[debug] [2026-06-18T03:26:10.490Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/guiasense-9de16 [none]
+[debug] [2026-06-18T03:26:10.699Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/guiasense-9de16 200
+[debug] [2026-06-18T03:26:10.699Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/guiasense-9de16 {"projectNumber":"106882005904","projectId":"guiasense-9de16","lifecycleState":"ACTIVE","name":"Guiasense","labels":{"firebase":"enabled","firebase-core":"disabled"},"createTime":"2026-06-17T22:54:13.836Z"}
+[info] i  functions: preparing codebase default for deployment 
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[debug] [2026-06-18T03:26:10.703Z] Checked if tokens are valid: true, expires at: 1781755705874
+[debug] [2026-06-18T03:26:10.703Z] Checked if tokens are valid: true, expires at: 1781755705874
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2026-06-18T03:26:10.703Z] Checked if tokens are valid: true, expires at: 1781755705874
+[debug] [2026-06-18T03:26:10.704Z] Checked if tokens are valid: true, expires at: 1781755705874
+[debug] [2026-06-18T03:26:10.704Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/guiasense-9de16/services/cloudbuild.googleapis.com [none]
+[debug] [2026-06-18T03:26:10.704Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/guiasense-9de16/services/cloudbuild.googleapis.com  x-goog-user-project=guiasense-9de16
+[debug] [2026-06-18T03:26:10.705Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/guiasense-9de16/services/artifactregistry.googleapis.com [none]
+[debug] [2026-06-18T03:26:10.706Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/guiasense-9de16/services/artifactregistry.googleapis.com  x-goog-user-project=guiasense-9de16
+[debug] [2026-06-18T03:26:21.804Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/guiasense-9de16/services/artifactregistry.googleapis.com 200
+[debug] [2026-06-18T03:26:21.804Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/guiasense-9de16/services/artifactregistry.googleapis.com [omitted]
+[warn] !  artifactregistry: missing required API artifactregistry.googleapis.com. Enabling now... 
+[debug] [2026-06-18T03:26:21.805Z] Checked if tokens are valid: true, expires at: 1781755705874
+[debug] [2026-06-18T03:26:21.805Z] Checked if tokens are valid: true, expires at: 1781755705874
+[debug] [2026-06-18T03:26:21.805Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/guiasense-9de16/services/artifactregistry.googleapis.com:enable [none]
+[debug] [2026-06-18T03:26:21.805Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/guiasense-9de16/services/artifactregistry.googleapis.com:enable  x-goog-user-project=guiasense-9de16
+[debug] [2026-06-18T03:26:21.844Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/guiasense-9de16/services/cloudbuild.googleapis.com 200
+[debug] [2026-06-18T03:26:21.844Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/guiasense-9de16/services/cloudbuild.googleapis.com [omitted]
+[warn] !  functions: missing required API cloudbuild.googleapis.com. Enabling now... 
+[debug] [2026-06-18T03:26:21.846Z] Checked if tokens are valid: true, expires at: 1781755705874
+[debug] [2026-06-18T03:26:21.846Z] Checked if tokens are valid: true, expires at: 1781755705874
+[debug] [2026-06-18T03:26:21.846Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/guiasense-9de16/services/cloudbuild.googleapis.com:enable [none]
+[debug] [2026-06-18T03:26:21.846Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/guiasense-9de16/services/cloudbuild.googleapis.com:enable  x-goog-user-project=guiasense-9de16
+[debug] [2026-06-18T03:26:22.556Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/guiasense-9de16/services/artifactregistry.googleapis.com:enable 200
+[debug] [2026-06-18T03:26:22.556Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/guiasense-9de16/services/artifactregistry.googleapis.com:enable [omitted]
+[debug] [2026-06-18T03:26:22.572Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/guiasense-9de16/services/cloudbuild.googleapis.com:enable 200
+[debug] [2026-06-18T03:26:22.572Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/guiasense-9de16/services/cloudbuild.googleapis.com:enable [omitted]
+[debug] [2026-06-18T03:26:32.587Z] Checked if tokens are valid: true, expires at: 1781755705874
+[debug] [2026-06-18T03:26:32.587Z] Checked if tokens are valid: true, expires at: 1781755705874
+[debug] [2026-06-18T03:26:32.588Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/guiasense-9de16/adminSdkConfig [none]
+[debug] [2026-06-18T03:26:53.220Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/guiasense-9de16/adminSdkConfig 200
+[debug] [2026-06-18T03:26:53.221Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/guiasense-9de16/adminSdkConfig {"projectId":"guiasense-9de16","storageBucket":"guiasense-9de16.firebasestorage.app"}
+[debug] [2026-06-18T03:26:53.222Z] Validating nodejs source
+[debug] [2026-06-18T03:26:54.127Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "echo lint skipped",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "24"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^13.6.0",
+    "firebase-functions": "^7.0.0",
+    "openai": "^6.44.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.4.1"
+  },
+  "private": true
+}
+[debug] [2026-06-18T03:26:54.127Z] Building nodejs source
+[info] i  functions: Loading and analyzing source code for codebase default to determine what to deploy 
+[debug] [2026-06-18T03:26:54.128Z] Could not find functions.yaml. Must use http discovery
+[debug] [2026-06-18T03:26:54.139Z] Found firebase-functions binary at 'C:\doc\aplicativo\MeuApp\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8441
+
+[debug] [2026-06-18T03:26:54.988Z] Got response from /__/functions.yaml {"endpoints":{"describeEnvironment":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","secretEnvironmentVariables":[{"key":"OPENAI_KEY"}],"labels":{},"httpsTrigger":{},"entryPoint":"describeEnvironment"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{},"params":[{"type":"secret","name":"OPENAI_KEY"}]}
+[debug] [2026-06-18T03:26:59.036Z] Checked if tokens are valid: true, expires at: 1781755705874
+[debug] [2026-06-18T03:26:59.037Z] Checked if tokens are valid: true, expires at: 1781755705874
+[debug] [2026-06-18T03:26:59.037Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/projects/guiasense-9de16/locations/-/functions [none]
+[debug] [2026-06-18T03:27:10.131Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/projects/guiasense-9de16/locations/-/functions 200
+[debug] [2026-06-18T03:27:10.131Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/projects/guiasense-9de16/locations/-/functions {}
+[debug] [2026-06-18T03:27:10.132Z] Checked if tokens are valid: true, expires at: 1781755705874
+[debug] [2026-06-18T03:27:10.132Z] Checked if tokens are valid: true, expires at: 1781755705874
+[debug] [2026-06-18T03:27:10.132Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/guiasense-9de16/locations/-/functions filter=environment%3D%22GEN_2%22
+[debug] [2026-06-18T03:27:11.581Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/guiasense-9de16/locations/-/functions 200
+[debug] [2026-06-18T03:27:11.581Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/guiasense-9de16/locations/-/functions {}
+[info] i  extensions: ensuring required API firebaseextensions.googleapis.com is enabled... 
+[debug] [2026-06-18T03:27:11.583Z] Checked if tokens are valid: true, expires at: 1781755705874
+[debug] [2026-06-18T03:27:11.583Z] Checked if tokens are valid: true, expires at: 1781755705874
+[debug] [2026-06-18T03:27:11.583Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/guiasense-9de16/services/firebaseextensions.googleapis.com [none]
+[debug] [2026-06-18T03:27:11.583Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/guiasense-9de16/services/firebaseextensions.googleapis.com  x-goog-user-project=guiasense-9de16
+[debug] [2026-06-18T03:27:12.631Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/guiasense-9de16/services/firebaseextensions.googleapis.com 200
+[debug] [2026-06-18T03:27:12.631Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/guiasense-9de16/services/firebaseextensions.googleapis.com [omitted]
+[warn] !  extensions: missing required API firebaseextensions.googleapis.com. Enabling now... 
+[debug] [2026-06-18T03:27:12.631Z] Checked if tokens are valid: true, expires at: 1781755705874
+[debug] [2026-06-18T03:27:12.631Z] Checked if tokens are valid: true, expires at: 1781755705874
+[debug] [2026-06-18T03:27:12.632Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/guiasense-9de16/services/firebaseextensions.googleapis.com:enable [none]
+[debug] [2026-06-18T03:27:12.632Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/guiasense-9de16/services/firebaseextensions.googleapis.com:enable  x-goog-user-project=guiasense-9de16
+[debug] [2026-06-18T03:27:13.289Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/guiasense-9de16/services/firebaseextensions.googleapis.com:enable 200
+[debug] [2026-06-18T03:27:13.289Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/guiasense-9de16/services/firebaseextensions.googleapis.com:enable [omitted]
+[debug] [2026-06-18T03:27:23.304Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-06-18T03:27:23.305Z] > authorizing via signed-in user (kamillabitencourt18@gmail.com)
+[debug] [2026-06-18T03:27:23.305Z] [iam] checking project guiasense-9de16 for permissions ["firebase.projects.get","firebaseextensions.instances.list"]
+[debug] [2026-06-18T03:27:23.305Z] Checked if tokens are valid: true, expires at: 1781755705874
+[debug] [2026-06-18T03:27:23.305Z] Checked if tokens are valid: true, expires at: 1781755705874
+[debug] [2026-06-18T03:27:23.305Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/guiasense-9de16:testIamPermissions [none]
+[debug] [2026-06-18T03:27:23.305Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/guiasense-9de16:testIamPermissions  x-goog-user-project=guiasense-9de16
+[debug] [2026-06-18T03:27:23.305Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/guiasense-9de16:testIamPermissions {"permissions":["firebase.projects.get","firebaseextensions.instances.list"]}
+[debug] [2026-06-18T03:27:24.194Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/guiasense-9de16:testIamPermissions 200
+[debug] [2026-06-18T03:27:24.194Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/guiasense-9de16:testIamPermissions {"permissions":["firebase.projects.get","firebaseextensions.instances.list"]}
+[debug] [2026-06-18T03:27:24.195Z] Checked if tokens are valid: true, expires at: 1781755705874
+[debug] [2026-06-18T03:27:24.195Z] Checked if tokens are valid: true, expires at: 1781755705874
+[debug] [2026-06-18T03:27:24.195Z] >>> [apiv2][query] GET https://firebaseextensions.googleapis.com/v1beta/projects/guiasense-9de16/instances pageSize=100&pageToken=
+[debug] [2026-06-18T03:27:37.051Z] <<< [apiv2][status] GET https://firebaseextensions.googleapis.com/v1beta/projects/guiasense-9de16/instances 200
+[debug] [2026-06-18T03:27:37.052Z] <<< [apiv2][body] GET https://firebaseextensions.googleapis.com/v1beta/projects/guiasense-9de16/instances {}
+[debug] [2026-06-18T03:27:37.053Z] Checked if tokens are valid: true, expires at: 1781755705874
+[debug] [2026-06-18T03:27:37.053Z] Checked if tokens are valid: true, expires at: 1781755705874
+[debug] [2026-06-18T03:27:37.053Z] >>> [apiv2][query] GET https://secretmanager.googleapis.com/v1/projects/guiasense-9de16/secrets/OPENAI_KEY [none]
+[debug] [2026-06-18T03:27:47.752Z] <<< [apiv2][status] GET https://secretmanager.googleapis.com/v1/projects/guiasense-9de16/secrets/OPENAI_KEY 200
+[debug] [2026-06-18T03:27:47.753Z] <<< [apiv2][body] GET https://secretmanager.googleapis.com/v1/projects/guiasense-9de16/secrets/OPENAI_KEY {"name":"projects/106882005904/secrets/OPENAI_KEY","replication":{"automatic":{}},"createTime":"2026-06-18T03:18:24.090328Z","labels":{"firebase-managed":"functions"},"etag":"\"16547ea112bf19\""}
+[debug] [2026-06-18T03:27:47.753Z] Checked if tokens are valid: true, expires at: 1781755705874
+[debug] [2026-06-18T03:27:47.753Z] Checked if tokens are valid: true, expires at: 1781755705874
+[debug] [2026-06-18T03:27:47.753Z] >>> [apiv2][query] GET https://secretmanager.googleapis.com/v1/projects/guiasense-9de16/secrets/OPENAI_KEY/versions/latest [none]
+[debug] [2026-06-18T03:27:47.983Z] <<< [apiv2][status] GET https://secretmanager.googleapis.com/v1/projects/guiasense-9de16/secrets/OPENAI_KEY/versions/latest 200
+[debug] [2026-06-18T03:27:47.983Z] <<< [apiv2][body] GET https://secretmanager.googleapis.com/v1/projects/guiasense-9de16/secrets/OPENAI_KEY/versions/latest {"name":"projects/106882005904/secrets/OPENAI_KEY/versions/1","createTime":"2026-06-18T03:21:31.760276Z","state":"ENABLED","replicationStatus":{"automatic":{}},"etag":"\"16547eac30de94\""}
+[info] i  functions: preparing functions directory for uploading... 
+[info] i  functions: packaged C:\doc\aplicativo\MeuApp\functions (79.33 KB) for uploading 
+[info] i  functions: ensuring required API run.googleapis.com is enabled... 
+[debug] [2026-06-18T03:27:48.024Z] Checked if tokens are valid: true, expires at: 1781755705874
+[debug] [2026-06-18T03:27:48.024Z] Checked if tokens are valid: true, expires at: 1781755705874
+[info] i  functions: ensuring required API eventarc.googleapis.com is enabled... 
+[debug] [2026-06-18T03:27:48.025Z] Checked if tokens are valid: true, expires at: 1781755705874
+[debug] [2026-06-18T03:27:48.025Z] Checked if tokens are valid: true, expires at: 1781755705874
+[info] i  functions: ensuring required API pubsub.googleapis.com is enabled... 
+[debug] [2026-06-18T03:27:48.025Z] Checked if tokens are valid: true, expires at: 1781755705874
+[debug] [2026-06-18T03:27:48.025Z] Checked if tokens are valid: true, expires at: 1781755705874
+[info] i  functions: ensuring required API storage.googleapis.com is enabled... 
+[debug] [2026-06-18T03:27:48.026Z] Checked if tokens are valid: true, expires at: 1781755705874
+[debug] [2026-06-18T03:27:48.026Z] Checked if tokens are valid: true, expires at: 1781755705874
+[debug] [2026-06-18T03:27:48.026Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/106882005904/services/run.googleapis.com [none]
+[debug] [2026-06-18T03:27:48.026Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/106882005904/services/run.googleapis.com  x-goog-user-project=106882005904
+[debug] [2026-06-18T03:27:48.028Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/106882005904/services/eventarc.googleapis.com [none]
+[debug] [2026-06-18T03:27:48.028Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/106882005904/services/eventarc.googleapis.com  x-goog-user-project=106882005904
+[debug] [2026-06-18T03:27:48.029Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/106882005904/services/pubsub.googleapis.com [none]
+[debug] [2026-06-18T03:27:48.029Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/106882005904/services/pubsub.googleapis.com  x-goog-user-project=106882005904
+[debug] [2026-06-18T03:27:48.031Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/106882005904/services/storage.googleapis.com [none]
+[debug] [2026-06-18T03:27:48.031Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/106882005904/services/storage.googleapis.com  x-goog-user-project=106882005904
+[debug] [2026-06-18T03:27:49.072Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/106882005904/services/eventarc.googleapis.com 200
+[debug] [2026-06-18T03:27:49.072Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/106882005904/services/eventarc.googleapis.com [omitted]
+[warn] !  functions: missing required API eventarc.googleapis.com. Enabling now... 
+[debug] [2026-06-18T03:27:49.073Z] Checked if tokens are valid: true, expires at: 1781755705874
+[debug] [2026-06-18T03:27:49.073Z] Checked if tokens are valid: true, expires at: 1781755705874
+[debug] [2026-06-18T03:27:49.073Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/106882005904/services/eventarc.googleapis.com:enable [none]
+[debug] [2026-06-18T03:27:49.073Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/106882005904/services/eventarc.googleapis.com:enable  x-goog-user-project=106882005904
+[debug] [2026-06-18T03:27:49.086Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/106882005904/services/run.googleapis.com 200
+[debug] [2026-06-18T03:27:49.086Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/106882005904/services/run.googleapis.com [omitted]
+[warn] !  functions: missing required API run.googleapis.com. Enabling now... 
+[debug] [2026-06-18T03:27:49.086Z] Checked if tokens are valid: true, expires at: 1781755705874
+[debug] [2026-06-18T03:27:49.086Z] Checked if tokens are valid: true, expires at: 1781755705874
+[debug] [2026-06-18T03:27:49.086Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/106882005904/services/run.googleapis.com:enable [none]
+[debug] [2026-06-18T03:27:49.087Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/106882005904/services/run.googleapis.com:enable  x-goog-user-project=106882005904
+[debug] [2026-06-18T03:27:49.106Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/106882005904/services/pubsub.googleapis.com 200
+[debug] [2026-06-18T03:27:49.107Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/106882005904/services/pubsub.googleapis.com [omitted]
+[info] +  functions: required API pubsub.googleapis.com is enabled 
+[debug] [2026-06-18T03:27:49.122Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/106882005904/services/storage.googleapis.com 200
+[debug] [2026-06-18T03:27:49.122Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/106882005904/services/storage.googleapis.com [omitted]
+[info] +  functions: required API storage.googleapis.com is enabled 
+[debug] [2026-06-18T03:27:49.769Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/106882005904/services/eventarc.googleapis.com:enable 200
+[debug] [2026-06-18T03:27:49.769Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/106882005904/services/eventarc.googleapis.com:enable [omitted]
+[debug] [2026-06-18T03:27:49.807Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/106882005904/services/run.googleapis.com:enable 200
+[debug] [2026-06-18T03:27:49.807Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/106882005904/services/run.googleapis.com:enable [omitted]
+[info] i  functions: generating the service identity for pubsub.googleapis.com... 
+[debug] [2026-06-18T03:27:59.819Z] Checked if tokens are valid: true, expires at: 1781755705874
+[debug] [2026-06-18T03:27:59.819Z] Checked if tokens are valid: true, expires at: 1781755705874
+[info] i  functions: generating the service identity for eventarc.googleapis.com... 
+[debug] [2026-06-18T03:27:59.820Z] Checked if tokens are valid: true, expires at: 1781755705874
+[debug] [2026-06-18T03:27:59.820Z] Checked if tokens are valid: true, expires at: 1781755705874
+[debug] [2026-06-18T03:27:59.820Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1beta1/projects/106882005904/services/pubsub.googleapis.com:generateServiceIdentity [none]
+[debug] [2026-06-18T03:27:59.820Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1beta1/projects/106882005904/services/pubsub.googleapis.com:generateServiceIdentity  x-goog-user-project=106882005904
+[debug] [2026-06-18T03:27:59.820Z] >>> [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/106882005904/services/pubsub.googleapis.com:generateServiceIdentity {}
+[debug] [2026-06-18T03:27:59.821Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1beta1/projects/106882005904/services/eventarc.googleapis.com:generateServiceIdentity [none]
+[debug] [2026-06-18T03:27:59.821Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1beta1/projects/106882005904/services/eventarc.googleapis.com:generateServiceIdentity  x-goog-user-project=106882005904
+[debug] [2026-06-18T03:27:59.821Z] >>> [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/106882005904/services/eventarc.googleapis.com:generateServiceIdentity {}
+[debug] [2026-06-18T03:28:01.490Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1beta1/projects/106882005904/services/eventarc.googleapis.com:generateServiceIdentity 200
+[debug] [2026-06-18T03:28:01.490Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/106882005904/services/eventarc.googleapis.com:generateServiceIdentity {"name":"operations/finished.DONE_OPERATION","done":true,"response":{"@type":"type.googleapis.com/google.api.serviceusage.v1beta1.ServiceIdentity","email":"service-106882005904@gcp-sa-eventarc.iam.gserviceaccount.com","uniqueId":"118314932708185926222"}}
+[debug] [2026-06-18T03:28:01.513Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1beta1/projects/106882005904/services/pubsub.googleapis.com:generateServiceIdentity 200
+[debug] [2026-06-18T03:28:01.513Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/106882005904/services/pubsub.googleapis.com:generateServiceIdentity {"name":"operations/finished.DONE_OPERATION","done":true,"response":{"@type":"type.googleapis.com/google.api.serviceusage.v1beta1.ServiceIdentity","email":"service-106882005904@gcp-sa-pubsub.iam.gserviceaccount.com","uniqueId":"116346762727061549629"}}
+[info] i  functions: ensuring required API secretmanager.googleapis.com is enabled... 
+[debug] [2026-06-18T03:28:01.514Z] Checked if tokens are valid: true, expires at: 1781755705874
+[debug] [2026-06-18T03:28:01.514Z] Checked if tokens are valid: true, expires at: 1781755705874
+[debug] [2026-06-18T03:28:01.514Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/106882005904/services/secretmanager.googleapis.com [none]
+[debug] [2026-06-18T03:28:01.514Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/106882005904/services/secretmanager.googleapis.com  x-goog-user-project=106882005904
+[debug] [2026-06-18T03:28:01.856Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/106882005904/services/secretmanager.googleapis.com 200
+[debug] [2026-06-18T03:28:01.856Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/106882005904/services/secretmanager.googleapis.com [omitted]
+[info] +  functions: required API secretmanager.googleapis.com is enabled 
+[debug] [2026-06-18T03:28:01.871Z] Checked if tokens are valid: true, expires at: 1781755705874
+[debug] [2026-06-18T03:28:01.871Z] Checked if tokens are valid: true, expires at: 1781755705874
+[debug] [2026-06-18T03:28:01.871Z] >>> [apiv2][query] GET https://secretmanager.googleapis.com/v1/projects/guiasense-9de16/secrets/OPENAI_KEY/versions/latest [none]
+[debug] [2026-06-18T03:28:02.505Z] <<< [apiv2][status] GET https://secretmanager.googleapis.com/v1/projects/guiasense-9de16/secrets/OPENAI_KEY/versions/latest 200
+[debug] [2026-06-18T03:28:02.506Z] <<< [apiv2][body] GET https://secretmanager.googleapis.com/v1/projects/guiasense-9de16/secrets/OPENAI_KEY/versions/latest {"name":"projects/106882005904/secrets/OPENAI_KEY/versions/1","createTime":"2026-06-18T03:21:31.760276Z","state":"ENABLED","replicationStatus":{"automatic":{}},"etag":"\"16547eac30de94\""}
+[debug] [2026-06-18T03:28:02.506Z] Resolved secret version of OPENAI_KEY to 1.
+[debug] [2026-06-18T03:28:02.507Z] Checked if tokens are valid: true, expires at: 1781755705874
+[debug] [2026-06-18T03:28:02.507Z] Checked if tokens are valid: true, expires at: 1781755705874
+[debug] [2026-06-18T03:28:02.507Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/guiasense-9de16 [none]
+[debug] [2026-06-18T03:28:02.824Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/guiasense-9de16 200
+[debug] [2026-06-18T03:28:02.824Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/guiasense-9de16 {"projectNumber":"106882005904","projectId":"guiasense-9de16","lifecycleState":"ACTIVE","name":"Guiasense","labels":{"firebase":"enabled","firebase-core":"disabled"},"createTime":"2026-06-17T22:54:13.836Z"}
+[debug] [2026-06-18T03:28:02.824Z] Checked if tokens are valid: true, expires at: 1781755705874
+[debug] [2026-06-18T03:28:02.825Z] Checked if tokens are valid: true, expires at: 1781755705874
+[debug] [2026-06-18T03:28:02.825Z] >>> [apiv2][query] GET https://compute.googleapis.com/compute/v1/projects/106882005904 [none]
+[debug] [2026-06-18T03:28:13.259Z] <<< [apiv2][status] GET https://compute.googleapis.com/compute/v1/projects/106882005904 403
+[debug] [2026-06-18T03:28:13.259Z] <<< [apiv2][body] GET https://compute.googleapis.com/compute/v1/projects/106882005904 {"error":{"code":403,"message":"Compute Engine API has not been used in project 106882005904 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=106882005904 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.","errors":[{"message":"Compute Engine API has not been used in project 106882005904 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=106882005904 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.","domain":"usageLimits","reason":"accessNotConfigured","extendedHelp":"https://console.developers.google.com"}],"status":"PERMISSION_DENIED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"SERVICE_DISABLED","domain":"googleapis.com","metadata":{"service":"compute.googleapis.com","serviceTitle":"Compute Engine API","containerInfo":"106882005904","activationUrl":"https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=106882005904","consumer":"projects/106882005904"}},{"@type":"type.googleapis.com/google.rpc.LocalizedMessage","locale":"en-US","message":"Compute Engine API has not been used in project 106882005904 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=106882005904 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Google developers console API activation","url":"https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=106882005904"}]}]}}
+[debug] [2026-06-18T03:28:13.260Z] unable to look up default compute service account. Falling back to 106882005904-compute@developer.gserviceaccount.com. Error: {"name":"FirebaseError","children":[],"context":{"body":{"error":{"code":403,"message":"Compute Engine API has not been used in project 106882005904 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=106882005904 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.","errors":[{"message":"Compute Engine API has not been used in project 106882005904 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=106882005904 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.","domain":"usageLimits","reason":"accessNotConfigured","extendedHelp":"https://console.developers.google.com"}],"status":"PERMISSION_DENIED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"SERVICE_DISABLED","domain":"googleapis.com","metadata":{"service":"compute.googleapis.com","serviceTitle":"Compute Engine API","containerInfo":"106882005904","activationUrl":"https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=106882005904","consumer":"projects/106882005904"}},{"@type":"type.googleapis.com/google.rpc.LocalizedMessage","locale":"en-US","message":"Compute Engine API has not been used in project 106882005904 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=106882005904 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Google developers console API activation","url":"https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=106882005904"}]}]}},"response":{"statusCode":403}},"exit":1,"message":"Request to https://compute.googleapis.com/compute/v1/projects/106882005904 had HTTP Error: 403, Compute Engine API has not been used in project 106882005904 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=106882005904 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.","status":403}
+[info] i  functions: ensuring 106882005904-compute@developer.gserviceaccount.com access to secret OPENAI_KEY. 
+[debug] [2026-06-18T03:28:13.260Z] Checked if tokens are valid: true, expires at: 1781755705874
+[debug] [2026-06-18T03:28:13.260Z] Checked if tokens are valid: true, expires at: 1781755705874
+[debug] [2026-06-18T03:28:13.260Z] >>> [apiv2][query] GET https://secretmanager.googleapis.com/v1/projects/guiasense-9de16/secrets/OPENAI_KEY:getIamPolicy [none]
+[debug] [2026-06-18T03:28:14.146Z] <<< [apiv2][status] GET https://secretmanager.googleapis.com/v1/projects/guiasense-9de16/secrets/OPENAI_KEY:getIamPolicy 200
+[debug] [2026-06-18T03:28:14.146Z] <<< [apiv2][body] GET https://secretmanager.googleapis.com/v1/projects/guiasense-9de16/secrets/OPENAI_KEY:getIamPolicy {"etag":"ACAB"}
+[debug] [2026-06-18T03:28:14.146Z] Checked if tokens are valid: true, expires at: 1781755705874
+[debug] [2026-06-18T03:28:14.147Z] Checked if tokens are valid: true, expires at: 1781755705874
+[debug] [2026-06-18T03:28:14.147Z] >>> [apiv2][query] POST https://secretmanager.googleapis.com/v1/projects/guiasense-9de16/secrets/OPENAI_KEY:setIamPolicy [none]
+[debug] [2026-06-18T03:28:14.147Z] >>> [apiv2][body] POST https://secretmanager.googleapis.com/v1/projects/guiasense-9de16/secrets/OPENAI_KEY:setIamPolicy {"policy":{"bindings":[{"role":"roles/secretmanager.secretAccessor","members":["serviceAccount:106882005904-compute@developer.gserviceaccount.com"]}]},"updateMask":"bindings"}
+[debug] [2026-06-18T03:28:14.822Z] <<< [apiv2][status] POST https://secretmanager.googleapis.com/v1/projects/guiasense-9de16/secrets/OPENAI_KEY:setIamPolicy 200
+[debug] [2026-06-18T03:28:14.823Z] <<< [apiv2][body] POST https://secretmanager.googleapis.com/v1/projects/guiasense-9de16/secrets/OPENAI_KEY:setIamPolicy {"version":1,"etag":"BwZUfsQ4Mao=","bindings":[{"role":"roles/secretmanager.secretAccessor","members":["serviceAccount:106882005904-compute@developer.gserviceaccount.com"]}]}
+[info] +  secretmanager: Granted roles/secretmanager.secretAccessor on projects/guiasense-9de16/secrets/OPENAI_KEY to 106882005904-compute@developer.gserviceaccount.com 
+[info] +  functions: ensured 106882005904-compute@developer.gserviceaccount.com access to OPENAI_KEY. 
+[debug] [2026-06-18T03:28:14.824Z] Checked if tokens are valid: true, expires at: 1781755705874
+[debug] [2026-06-18T03:28:14.824Z] Checked if tokens are valid: true, expires at: 1781755705874
+[debug] [2026-06-18T03:28:14.824Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/guiasense-9de16/billingInfo [none]
+[debug] [2026-06-18T03:28:25.319Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/guiasense-9de16/billingInfo 200
+[debug] [2026-06-18T03:28:25.319Z] <<< [apiv2][body] GET https://cloudbilling.googleapis.com/v1/projects/guiasense-9de16/billingInfo {"name":"projects/guiasense-9de16/billingInfo","projectId":"guiasense-9de16","billingAccountName":"billingAccounts/01C8E4-53BB56-584A8A","billingEnabled":true}
+[debug] [2026-06-18T03:28:25.320Z] [functions] found 1 new HTTP functions, testing setIamPolicy permission...
+[debug] [2026-06-18T03:28:25.320Z] Checked if tokens are valid: true, expires at: 1781755705874
+[debug] [2026-06-18T03:28:25.320Z] Checked if tokens are valid: true, expires at: 1781755705874
+[debug] [2026-06-18T03:28:25.321Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/guiasense-9de16:testIamPermissions [none]
+[debug] [2026-06-18T03:28:25.321Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/guiasense-9de16:testIamPermissions  x-goog-user-project=guiasense-9de16
+[debug] [2026-06-18T03:28:25.321Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/guiasense-9de16:testIamPermissions {"permissions":["cloudfunctions.functions.setIamPolicy"]}
+[debug] [2026-06-18T03:28:26.214Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/guiasense-9de16:testIamPermissions 200
+[debug] [2026-06-18T03:28:26.214Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/guiasense-9de16:testIamPermissions {"permissions":["cloudfunctions.functions.setIamPolicy"]}
+[debug] [2026-06-18T03:28:26.214Z] [functions] found setIamPolicy permission, proceeding with deploy
+[debug] [2026-06-18T03:28:26.215Z] Checked if tokens are valid: true, expires at: 1781755705874
+[debug] [2026-06-18T03:28:26.215Z] Checked if tokens are valid: true, expires at: 1781755705874
+[debug] [2026-06-18T03:28:26.215Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v2/projects/guiasense-9de16/locations/us-central1/functions:generateUploadUrl [none]
+[debug] [2026-06-18T03:28:28.599Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v2/projects/guiasense-9de16/locations/us-central1/functions:generateUploadUrl 200
+[debug] [2026-06-18T03:28:28.600Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/guiasense-9de16/locations/us-central1/functions:generateUploadUrl {"uploadUrl":"https://storage.googleapis.com/gcf-v2-uploads-106882005904.us-central1.cloudfunctions.appspot.com/e97ff632-3da3-42ea-bae1-c09af7abe82d.zip?GoogleAccessId=service-106882005904@gcf-admin-robot.iam.gserviceaccount.com&Expires=1781755108&Signature=qPCsuay5BS%2BcMZZUA%2FjWLiGUSFAEEwd9%2FCv35Smd8jpQSEhb9LnO%2Bz2e9cvTFC6v%2BDq%2F6gv%2BW%2FZGO4LagxoMoIqVWBa%2B1LOgdRV%2F9s9rkTl8SF5l9oj2oaYvGUeFurDOA72EoH7vRGDxkRl2NZEVbLVza9qa%2B55PHgCDl0e9USJy0L2GsQkGNIyqoidROKaxsfCIL7R1t1mcEPzPQqS%2FMfH2SAY1V7K%2BpL4gfInF3qRmBK%2FBlkpK670wP%2FL9qvIaMfcJTmdJ2DxNx2mrOxQ4ETqqtFo5a47mQKIj1tZicJAPCRIJ1x0fh2jCcs%2F4OpITXlcoTo9MG50Mp3VMnhXliQ%3D%3D","storageSource":{"bucket":"gcf-v2-uploads-106882005904.us-central1.cloudfunctions.appspot.com","object":"e97ff632-3da3-42ea-bae1-c09af7abe82d.zip"}}
+[debug] [2026-06-18T03:28:28.600Z] >>> [apiv2][query] PUT https://storage.googleapis.com/gcf-v2-uploads-106882005904.us-central1.cloudfunctions.appspot.com/e97ff632-3da3-42ea-bae1-c09af7abe82d.zip GoogleAccessId=service-106882005904%40gcf-admin-robot.iam.gserviceaccount.com&Expires=1781755108&Signature=qPCsuay5BS%2BcMZZUA%2FjWLiGUSFAEEwd9%2FCv35Smd8jpQSEhb9LnO%2Bz2e9cvTFC6v%2BDq%2F6gv%2BW%2FZGO4LagxoMoIqVWBa%2B1LOgdRV%2F9s9rkTl8SF5l9oj2oaYvGUeFurDOA72EoH7vRGDxkRl2NZEVbLVza9qa%2B55PHgCDl0e9USJy0L2GsQkGNIyqoidROKaxsfCIL7R1t1mcEPzPQqS%2FMfH2SAY1V7K%2BpL4gfInF3qRmBK%2FBlkpK670wP%2FL9qvIaMfcJTmdJ2DxNx2mrOxQ4ETqqtFo5a47mQKIj1tZicJAPCRIJ1x0fh2jCcs%2F4OpITXlcoTo9MG50Mp3VMnhXliQ%3D%3D
+[debug] [2026-06-18T03:28:28.600Z] >>> [apiv2][body] PUT https://storage.googleapis.com/gcf-v2-uploads-106882005904.us-central1.cloudfunctions.appspot.com/e97ff632-3da3-42ea-bae1-c09af7abe82d.zip [stream]
+[debug] [2026-06-18T03:28:39.378Z] <<< [apiv2][status] PUT https://storage.googleapis.com/gcf-v2-uploads-106882005904.us-central1.cloudfunctions.appspot.com/e97ff632-3da3-42ea-bae1-c09af7abe82d.zip 200
+[debug] [2026-06-18T03:28:39.378Z] <<< [apiv2][body] PUT https://storage.googleapis.com/gcf-v2-uploads-106882005904.us-central1.cloudfunctions.appspot.com/e97ff632-3da3-42ea-bae1-c09af7abe82d.zip [omitted]
+[info] +  functions: functions source uploaded successfully 
+[info] i  functions: creating Node.js 24 (2nd Gen) function describeEnvironment(us-central1)... 
+[debug] [2026-06-18T03:28:39.382Z] Checked if tokens are valid: true, expires at: 1781755705874
+[debug] [2026-06-18T03:28:39.382Z] Checked if tokens are valid: true, expires at: 1781755705874
+[debug] [2026-06-18T03:28:39.382Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v2/projects/guiasense-9de16/locations/us-central1/functions functionId=describeEnvironment
+[debug] [2026-06-18T03:28:39.382Z] >>> [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/guiasense-9de16/locations/us-central1/functions {"name":"projects/guiasense-9de16/locations/us-central1/functions/describeEnvironment","buildConfig":{"runtime":"nodejs24","entryPoint":"describeEnvironment","source":{"storageSource":{"bucket":"gcf-v2-uploads-106882005904.us-central1.cloudfunctions.appspot.com","object":"e97ff632-3da3-42ea-bae1-c09af7abe82d.zip"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""}},"serviceConfig":{"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"guiasense-9de16\",\"storageBucket\":\"guiasense-9de16.firebasestorage.app\"}","GCLOUD_PROJECT":"guiasense-9de16","EVENTARC_CLOUD_EVENT_SOURCE":"projects/guiasense-9de16/locations/us-central1/services/describeEnvironment","FUNCTION_TARGET":"describeEnvironment","LOG_EXECUTION_ID":"true"},"secretEnvironmentVariables":[{"key":"OPENAI_KEY","secret":"OPENAI_KEY","projectId":"guiasense-9de16","version":"1"}],"ingressSettings":null,"timeoutSeconds":null,"serviceAccountEmail":null,"availableMemory":"256Mi","minInstanceCount":null,"maxInstanceCount":null,"maxInstanceRequestConcurrency":80,"availableCpu":"1","vpcConnector":null,"vpcConnectorEgressSettings":null,"directVpcNetworkInterface":null,"directVpcEgress":null},"labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"b09f61b83d82c66d289f2d52def444f9a24d7a12"}}
+[debug] [2026-06-18T03:28:43.209Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v2/projects/guiasense-9de16/locations/us-central1/functions 200
+[debug] [2026-06-18T03:28:43.209Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/guiasense-9de16/locations/us-central1/functions {"name":"projects/guiasense-9de16/locations/us-central1/operations/operation-1781753320725-6547ec5c25d31-c9d874c8-e51bf697","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2026-06-18T03:28:43.276640360Z","target":"projects/guiasense-9de16/locations/us-central1/functions/describeEnvironment","verb":"create","cancelRequested":false,"apiVersion":"v2"},"done":false}
+[debug] [2026-06-18T03:28:43.210Z] Checked if tokens are valid: true, expires at: 1781755705874
+[debug] [2026-06-18T03:28:43.210Z] Checked if tokens are valid: true, expires at: 1781755705874
+[debug] [2026-06-18T03:28:43.210Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/guiasense-9de16/locations/us-central1/operations/operation-1781753320725-6547ec5c25d31-c9d874c8-e51bf697 [none]
+[debug] [2026-06-18T03:28:44.249Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/guiasense-9de16/locations/us-central1/operations/operation-1781753320725-6547ec5c25d31-c9d874c8-e51bf697 200
+[debug] [2026-06-18T03:28:44.250Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/guiasense-9de16/locations/us-central1/operations/operation-1781753320725-6547ec5c25d31-c9d874c8-e51bf697 {"name":"projects/guiasense-9de16/locations/us-central1/operations/operation-1781753320725-6547ec5c25d31-c9d874c8-e51bf697","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2026-06-18T03:28:43.276640360Z","target":"projects/guiasense-9de16/locations/us-central1/functions/describeEnvironment","verb":"create","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/guiasense-9de16/locations/us-central1/functions/describeEnvironment","buildConfig":{"runtime":"nodejs24","entryPoint":"describeEnvironment","source":{"storageSource":{"bucket":"gcf-v2-sources-106882005904-us-central1","object":"describeEnvironment/function-source.zip","generation":"1781753322396814"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"serviceAccount":"projects/guiasense-9de16/serviceAccounts/106882005904-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/guiasense-9de16/locations/us-central1/services/describeenvironment","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"guiasense-9de16\",\"storageBucket\":\"guiasense-9de16.firebasestorage.app\"}","GCLOUD_PROJECT":"guiasense-9de16","EVENTARC_CLOUD_EVENT_SOURCE":"projects/guiasense-9de16/locations/us-central1/services/describeEnvironment","FUNCTION_TARGET":"describeEnvironment","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"106882005904-compute@developer.gserviceaccount.com","availableMemory":"256Mi","secretEnvironmentVariables":[{"key":"OPENAI_KEY","projectId":"guiasense-9de16","secret":"OPENAI_KEY","version":"1"}],"maxInstanceRequestConcurrency":80,"availableCpu":"1"},"labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"b09f61b83d82c66d289f2d52def444f9a24d7a12"},"environment":"GEN_2"},"stages":[{"name":"BUILD","state":"NOT_STARTED"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"CREATE_FUNCTION"},"done":false}
+[debug] [2026-06-18T03:28:44.763Z] [create-default-us-central1-describeEnvironment] Retrying task index 0
+[debug] [2026-06-18T03:28:44.763Z] Checked if tokens are valid: true, expires at: 1781755705874
+[debug] [2026-06-18T03:28:44.764Z] Checked if tokens are valid: true, expires at: 1781755705874
+[debug] [2026-06-18T03:28:44.764Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/guiasense-9de16/locations/us-central1/operations/operation-1781753320725-6547ec5c25d31-c9d874c8-e51bf697 [none]
+[debug] [2026-06-18T03:28:45.873Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/guiasense-9de16/locations/us-central1/operations/operation-1781753320725-6547ec5c25d31-c9d874c8-e51bf697 200
+[debug] [2026-06-18T03:28:45.874Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/guiasense-9de16/locations/us-central1/operations/operation-1781753320725-6547ec5c25d31-c9d874c8-e51bf697 {"name":"projects/guiasense-9de16/locations/us-central1/operations/operation-1781753320725-6547ec5c25d31-c9d874c8-e51bf697","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2026-06-18T03:28:43.276640360Z","target":"projects/guiasense-9de16/locations/us-central1/functions/describeEnvironment","verb":"create","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/guiasense-9de16/locations/us-central1/functions/describeEnvironment","buildConfig":{"runtime":"nodejs24","entryPoint":"describeEnvironment","source":{"storageSource":{"bucket":"gcf-v2-sources-106882005904-us-central1","object":"describeEnvironment/function-source.zip","generation":"1781753322396814"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"serviceAccount":"projects/guiasense-9de16/serviceAccounts/106882005904-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/guiasense-9de16/locations/us-central1/services/describeenvironment","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"guiasense-9de16\",\"storageBucket\":\"guiasense-9de16.firebasestorage.app\"}","GCLOUD_PROJECT":"guiasense-9de16","EVENTARC_CLOUD_EVENT_SOURCE":"projects/guiasense-9de16/locations/us-central1/services/describeEnvironment","FUNCTION_TARGET":"describeEnvironment","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"106882005904-compute@developer.gserviceaccount.com","availableMemory":"256Mi","secretEnvironmentVariables":[{"key":"OPENAI_KEY","projectId":"guiasense-9de16","secret":"OPENAI_KEY","version":"1"}],"maxInstanceRequestConcurrency":80,"availableCpu":"1"},"labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"b09f61b83d82c66d289f2d52def444f9a24d7a12"},"environment":"GEN_2"},"stages":[{"name":"BUILD","state":"NOT_STARTED"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"CREATE_FUNCTION"},"done":false}
+[debug] [2026-06-18T03:28:46.887Z] [create-default-us-central1-describeEnvironment] Retrying task index 0
+[debug] [2026-06-18T03:28:46.887Z] Checked if tokens are valid: true, expires at: 1781755705874
+[debug] [2026-06-18T03:28:46.887Z] Checked if tokens are valid: true, expires at: 1781755705874
+[debug] [2026-06-18T03:28:46.887Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/guiasense-9de16/locations/us-central1/operations/operation-1781753320725-6547ec5c25d31-c9d874c8-e51bf697 [none]
+[debug] [2026-06-18T03:28:48.018Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/guiasense-9de16/locations/us-central1/operations/operation-1781753320725-6547ec5c25d31-c9d874c8-e51bf697 200
+[debug] [2026-06-18T03:28:48.018Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/guiasense-9de16/locations/us-central1/operations/operation-1781753320725-6547ec5c25d31-c9d874c8-e51bf697 {"name":"projects/guiasense-9de16/locations/us-central1/operations/operation-1781753320725-6547ec5c25d31-c9d874c8-e51bf697","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2026-06-18T03:28:43.276640360Z","target":"projects/guiasense-9de16/locations/us-central1/functions/describeEnvironment","verb":"create","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/guiasense-9de16/locations/us-central1/functions/describeEnvironment","buildConfig":{"runtime":"nodejs24","entryPoint":"describeEnvironment","source":{"storageSource":{"bucket":"gcf-v2-sources-106882005904-us-central1","object":"describeEnvironment/function-source.zip","generation":"1781753322396814"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"serviceAccount":"projects/guiasense-9de16/serviceAccounts/106882005904-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/guiasense-9de16/locations/us-central1/services/describeenvironment","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"guiasense-9de16\",\"storageBucket\":\"guiasense-9de16.firebasestorage.app\"}","GCLOUD_PROJECT":"guiasense-9de16","EVENTARC_CLOUD_EVENT_SOURCE":"projects/guiasense-9de16/locations/us-central1/services/describeEnvironment","FUNCTION_TARGET":"describeEnvironment","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"106882005904-compute@developer.gserviceaccount.com","availableMemory":"256Mi","secretEnvironmentVariables":[{"key":"OPENAI_KEY","projectId":"guiasense-9de16","secret":"OPENAI_KEY","version":"1"}],"maxInstanceRequestConcurrency":80,"availableCpu":"1"},"labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"b09f61b83d82c66d289f2d52def444f9a24d7a12"},"environment":"GEN_2"},"stages":[{"name":"BUILD","state":"NOT_STARTED"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"CREATE_FUNCTION"},"done":false}
+[debug] [2026-06-18T03:28:50.027Z] [create-default-us-central1-describeEnvironment] Retrying task index 0
+[debug] [2026-06-18T03:28:50.027Z] Checked if tokens are valid: true, expires at: 1781755705874
+[debug] [2026-06-18T03:28:50.027Z] Checked if tokens are valid: true, expires at: 1781755705874
+[debug] [2026-06-18T03:28:50.027Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/guiasense-9de16/locations/us-central1/operations/operation-1781753320725-6547ec5c25d31-c9d874c8-e51bf697 [none]
+[debug] [2026-06-18T03:28:51.046Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/guiasense-9de16/locations/us-central1/operations/operation-1781753320725-6547ec5c25d31-c9d874c8-e51bf697 200
+[debug] [2026-06-18T03:28:51.046Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/guiasense-9de16/locations/us-central1/operations/operation-1781753320725-6547ec5c25d31-c9d874c8-e51bf697 {"name":"projects/guiasense-9de16/locations/us-central1/operations/operation-1781753320725-6547ec5c25d31-c9d874c8-e51bf697","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2026-06-18T03:28:43.276640360Z","target":"projects/guiasense-9de16/locations/us-central1/functions/describeEnvironment","verb":"create","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/guiasense-9de16/locations/us-central1/functions/describeEnvironment","buildConfig":{"runtime":"nodejs24","entryPoint":"describeEnvironment","source":{"storageSource":{"bucket":"gcf-v2-sources-106882005904-us-central1","object":"describeEnvironment/function-source.zip","generation":"1781753322396814"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"serviceAccount":"projects/guiasense-9de16/serviceAccounts/106882005904-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/guiasense-9de16/locations/us-central1/services/describeenvironment","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"guiasense-9de16\",\"storageBucket\":\"guiasense-9de16.firebasestorage.app\"}","GCLOUD_PROJECT":"guiasense-9de16","EVENTARC_CLOUD_EVENT_SOURCE":"projects/guiasense-9de16/locations/us-central1/services/describeEnvironment","FUNCTION_TARGET":"describeEnvironment","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"106882005904-compute@developer.gserviceaccount.com","availableMemory":"256Mi","secretEnvironmentVariables":[{"key":"OPENAI_KEY","projectId":"guiasense-9de16","secret":"OPENAI_KEY","version":"1"}],"maxInstanceRequestConcurrency":80,"availableCpu":"1"},"labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"b09f61b83d82c66d289f2d52def444f9a24d7a12"},"environment":"GEN_2"},"stages":[{"name":"BUILD","state":"NOT_STARTED"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"CREATE_FUNCTION"},"done":false}
+[debug] [2026-06-18T03:28:55.059Z] [create-default-us-central1-describeEnvironment] Retrying task index 0
+[debug] [2026-06-18T03:28:55.059Z] Checked if tokens are valid: true, expires at: 1781755705874
+[debug] [2026-06-18T03:28:55.059Z] Checked if tokens are valid: true, expires at: 1781755705874
+[debug] [2026-06-18T03:28:55.059Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/guiasense-9de16/locations/us-central1/operations/operation-1781753320725-6547ec5c25d31-c9d874c8-e51bf697 [none]
+[debug] [2026-06-18T03:28:56.077Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/guiasense-9de16/locations/us-central1/operations/operation-1781753320725-6547ec5c25d31-c9d874c8-e51bf697 200
+[debug] [2026-06-18T03:28:56.077Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/guiasense-9de16/locations/us-central1/operations/operation-1781753320725-6547ec5c25d31-c9d874c8-e51bf697 {"name":"projects/guiasense-9de16/locations/us-central1/operations/operation-1781753320725-6547ec5c25d31-c9d874c8-e51bf697","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2026-06-18T03:28:43.276640360Z","target":"projects/guiasense-9de16/locations/us-central1/functions/describeEnvironment","verb":"create","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/guiasense-9de16/locations/us-central1/functions/describeEnvironment","buildConfig":{"runtime":"nodejs24","entryPoint":"describeEnvironment","source":{"storageSource":{"bucket":"gcf-v2-sources-106882005904-us-central1","object":"describeEnvironment/function-source.zip","generation":"1781753322396814"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"serviceAccount":"projects/guiasense-9de16/serviceAccounts/106882005904-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/guiasense-9de16/locations/us-central1/services/describeenvironment","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"guiasense-9de16\",\"storageBucket\":\"guiasense-9de16.firebasestorage.app\"}","GCLOUD_PROJECT":"guiasense-9de16","EVENTARC_CLOUD_EVENT_SOURCE":"projects/guiasense-9de16/locations/us-central1/services/describeEnvironment","FUNCTION_TARGET":"describeEnvironment","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"106882005904-compute@developer.gserviceaccount.com","availableMemory":"256Mi","secretEnvironmentVariables":[{"key":"OPENAI_KEY","projectId":"guiasense-9de16","secret":"OPENAI_KEY","version":"1"}],"maxInstanceRequestConcurrency":80,"availableCpu":"1"},"labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"b09f61b83d82c66d289f2d52def444f9a24d7a12"},"environment":"GEN_2"},"stages":[{"name":"BUILD","message":"Build in progress","state":"IN_PROGRESS","resource":"projects/106882005904/locations/us-central1/builds/95bb6203-4caa-48db-bab3-ac137aec8265","resourceUri":"https://console.cloud.google.com/cloud-build/builds;region=us-central1/95bb6203-4caa-48db-bab3-ac137aec8265?project=106882005904"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"CREATE_FUNCTION","buildName":"projects/106882005904/locations/us-central1/builds/95bb6203-4caa-48db-bab3-ac137aec8265"},"done":false}
+[debug] [2026-06-18T03:29:04.090Z] [create-default-us-central1-describeEnvironment] Retrying task index 0
+[debug] [2026-06-18T03:29:04.090Z] Checked if tokens are valid: true, expires at: 1781755705874
+[debug] [2026-06-18T03:29:04.090Z] Checked if tokens are valid: true, expires at: 1781755705874
+[debug] [2026-06-18T03:29:04.090Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/guiasense-9de16/locations/us-central1/operations/operation-1781753320725-6547ec5c25d31-c9d874c8-e51bf697 [none]
+[debug] [2026-06-18T03:29:05.209Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/guiasense-9de16/locations/us-central1/operations/operation-1781753320725-6547ec5c25d31-c9d874c8-e51bf697 200
+[debug] [2026-06-18T03:29:05.209Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/guiasense-9de16/locations/us-central1/operations/operation-1781753320725-6547ec5c25d31-c9d874c8-e51bf697 {"name":"projects/guiasense-9de16/locations/us-central1/operations/operation-1781753320725-6547ec5c25d31-c9d874c8-e51bf697","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2026-06-18T03:28:43.276640360Z","target":"projects/guiasense-9de16/locations/us-central1/functions/describeEnvironment","verb":"create","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/guiasense-9de16/locations/us-central1/functions/describeEnvironment","buildConfig":{"runtime":"nodejs24","entryPoint":"describeEnvironment","source":{"storageSource":{"bucket":"gcf-v2-sources-106882005904-us-central1","object":"describeEnvironment/function-source.zip","generation":"1781753322396814"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"serviceAccount":"projects/guiasense-9de16/serviceAccounts/106882005904-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/guiasense-9de16/locations/us-central1/services/describeenvironment","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"guiasense-9de16\",\"storageBucket\":\"guiasense-9de16.firebasestorage.app\"}","GCLOUD_PROJECT":"guiasense-9de16","EVENTARC_CLOUD_EVENT_SOURCE":"projects/guiasense-9de16/locations/us-central1/services/describeEnvironment","FUNCTION_TARGET":"describeEnvironment","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"106882005904-compute@developer.gserviceaccount.com","availableMemory":"256Mi","secretEnvironmentVariables":[{"key":"OPENAI_KEY","projectId":"guiasense-9de16","secret":"OPENAI_KEY","version":"1"}],"maxInstanceRequestConcurrency":80,"availableCpu":"1"},"labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"b09f61b83d82c66d289f2d52def444f9a24d7a12"},"environment":"GEN_2"},"stages":[{"name":"BUILD","message":"Build in progress","state":"IN_PROGRESS","resource":"projects/106882005904/locations/us-central1/builds/95bb6203-4caa-48db-bab3-ac137aec8265","resourceUri":"https://console.cloud.google.com/cloud-build/builds;region=us-central1/95bb6203-4caa-48db-bab3-ac137aec8265?project=106882005904"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"CREATE_FUNCTION","buildName":"projects/106882005904/locations/us-central1/builds/95bb6203-4caa-48db-bab3-ac137aec8265"},"done":false}
+[debug] [2026-06-18T03:29:15.224Z] [create-default-us-central1-describeEnvironment] Retrying task index 0
+[debug] [2026-06-18T03:29:15.224Z] Checked if tokens are valid: true, expires at: 1781755705874
+[debug] [2026-06-18T03:29:15.224Z] Checked if tokens are valid: true, expires at: 1781755705874
+[debug] [2026-06-18T03:29:15.224Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/guiasense-9de16/locations/us-central1/operations/operation-1781753320725-6547ec5c25d31-c9d874c8-e51bf697 [none]
+[debug] [2026-06-18T03:29:16.353Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/guiasense-9de16/locations/us-central1/operations/operation-1781753320725-6547ec5c25d31-c9d874c8-e51bf697 200
+[debug] [2026-06-18T03:29:16.353Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/guiasense-9de16/locations/us-central1/operations/operation-1781753320725-6547ec5c25d31-c9d874c8-e51bf697 {"name":"projects/guiasense-9de16/locations/us-central1/operations/operation-1781753320725-6547ec5c25d31-c9d874c8-e51bf697","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2026-06-18T03:28:43.276640360Z","target":"projects/guiasense-9de16/locations/us-central1/functions/describeEnvironment","verb":"create","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/guiasense-9de16/locations/us-central1/functions/describeEnvironment","buildConfig":{"runtime":"nodejs24","entryPoint":"describeEnvironment","source":{"storageSource":{"bucket":"gcf-v2-sources-106882005904-us-central1","object":"describeEnvironment/function-source.zip","generation":"1781753322396814"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"serviceAccount":"projects/guiasense-9de16/serviceAccounts/106882005904-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/guiasense-9de16/locations/us-central1/services/describeenvironment","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"guiasense-9de16\",\"storageBucket\":\"guiasense-9de16.firebasestorage.app\"}","GCLOUD_PROJECT":"guiasense-9de16","EVENTARC_CLOUD_EVENT_SOURCE":"projects/guiasense-9de16/locations/us-central1/services/describeEnvironment","FUNCTION_TARGET":"describeEnvironment","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"106882005904-compute@developer.gserviceaccount.com","availableMemory":"256Mi","secretEnvironmentVariables":[{"key":"OPENAI_KEY","projectId":"guiasense-9de16","secret":"OPENAI_KEY","version":"1"}],"maxInstanceRequestConcurrency":80,"availableCpu":"1"},"labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"b09f61b83d82c66d289f2d52def444f9a24d7a12"},"environment":"GEN_2"},"stages":[{"name":"BUILD","message":"Build in progress","state":"IN_PROGRESS","resource":"projects/106882005904/locations/us-central1/builds/95bb6203-4caa-48db-bab3-ac137aec8265","resourceUri":"https://console.cloud.google.com/cloud-build/builds;region=us-central1/95bb6203-4caa-48db-bab3-ac137aec8265?project=106882005904"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"CREATE_FUNCTION","buildName":"projects/106882005904/locations/us-central1/builds/95bb6203-4caa-48db-bab3-ac137aec8265"},"done":false}
+[debug] [2026-06-18T03:29:26.357Z] [create-default-us-central1-describeEnvironment] Retrying task index 0
+[debug] [2026-06-18T03:29:26.358Z] Checked if tokens are valid: true, expires at: 1781755705874
+[debug] [2026-06-18T03:29:26.358Z] Checked if tokens are valid: true, expires at: 1781755705874
+[debug] [2026-06-18T03:29:26.358Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/guiasense-9de16/locations/us-central1/operations/operation-1781753320725-6547ec5c25d31-c9d874c8-e51bf697 [none]
+[debug] [2026-06-18T03:29:27.502Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/guiasense-9de16/locations/us-central1/operations/operation-1781753320725-6547ec5c25d31-c9d874c8-e51bf697 200
+[debug] [2026-06-18T03:29:27.502Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/guiasense-9de16/locations/us-central1/operations/operation-1781753320725-6547ec5c25d31-c9d874c8-e51bf697 {"name":"projects/guiasense-9de16/locations/us-central1/operations/operation-1781753320725-6547ec5c25d31-c9d874c8-e51bf697","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2026-06-18T03:28:43.276640360Z","endTime":"2026-06-18T03:29:26.544440172Z","target":"projects/guiasense-9de16/locations/us-central1/functions/describeEnvironment","verb":"create","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/guiasense-9de16/locations/us-central1/functions/describeEnvironment","buildConfig":{"runtime":"nodejs24","entryPoint":"describeEnvironment","source":{"storageSource":{"bucket":"gcf-v2-sources-106882005904-us-central1","object":"describeEnvironment/function-source.zip","generation":"1781753322396814"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"serviceAccount":"projects/guiasense-9de16/serviceAccounts/106882005904-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/guiasense-9de16/locations/us-central1/services/describeenvironment","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"guiasense-9de16\",\"storageBucket\":\"guiasense-9de16.firebasestorage.app\"}","GCLOUD_PROJECT":"guiasense-9de16","EVENTARC_CLOUD_EVENT_SOURCE":"projects/guiasense-9de16/locations/us-central1/services/describeEnvironment","FUNCTION_TARGET":"describeEnvironment","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"106882005904-compute@developer.gserviceaccount.com","availableMemory":"256Mi","secretEnvironmentVariables":[{"key":"OPENAI_KEY","projectId":"guiasense-9de16","secret":"OPENAI_KEY","version":"1"}],"maxInstanceRequestConcurrency":80,"availableCpu":"1"},"labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"b09f61b83d82c66d289f2d52def444f9a24d7a12"},"environment":"GEN_2"},"stages":[{"name":"ARTIFACT_REGISTRY","message":"Deleting function artifacts in Artifact Registry","state":"COMPLETE"},{"name":"SERVICE","message":"Deleting Cloud Run service","state":"COMPLETE","resource":"projects/guiasense-9de16/locations/us-central1/services/describeenvironment"}],"operationType":"CREATE_FUNCTION"},"done":true,"error":{"code":3,"message":"Build failed with status: FAILURE. Could not build the function due to a missing permission on the build service account. If you didn't revoke that permission explicitly, this could be caused by a change in the organization policies. Please refer to the following documentation for more details and resolution: https://cloud.google.com/functions/docs/troubleshooting#build-service-account\n You can also view the logs at https://console.cloud.google.com/cloud-build/builds;region=us-central1/95bb6203-4caa-48db-bab3-ac137aec8265?project=106882005904.\n"}}
+[debug] [2026-06-18T03:29:27.502Z] Got source token undefined for region us-central1
+[error] Build failed with status: FAILURE. Could not build the function due to a missing permission on the build service account. If you didn't revoke that permission explicitly, this could be caused by a change in the organization policies. Please refer to the following documentation for more details and resolution: https://cloud.google.com/functions/docs/troubleshooting#build-service-account
+ You can also view the logs at https://console.cloud.google.com/cloud-build/builds;region=us-central1/95bb6203-4caa-48db-bab3-ac137aec8265?project=106882005904.
+
+[warn] !  functions: Deploys failed. Skipping deletes. 
+[debug] [2026-06-18T03:29:27.508Z] Total Function Deployment time: 48114
+[debug] [2026-06-18T03:29:27.508Z] 1 Functions Deployed
+[debug] [2026-06-18T03:29:27.508Z] 1 Functions Errored
+[debug] [2026-06-18T03:29:27.508Z] 0 Function Deployments Aborted
+[debug] [2026-06-18T03:29:27.508Z] Average Function Deployment time: 48113
+[info] 
+[info] Functions deploy had errors with the following functions:
+	describeEnvironment(us-central1)
+[debug] [2026-06-18T03:29:27.703Z] Not printing URL for HTTPS function. Typically this means it didn't match a filter or we failed deployment
+[debug] [2026-06-18T03:29:27.704Z] Checked if tokens are valid: true, expires at: 1781755705874
+[debug] [2026-06-18T03:29:27.704Z] Checked if tokens are valid: true, expires at: 1781755705874
+[debug] [2026-06-18T03:29:27.704Z] >>> [apiv2][query] GET https://artifactregistry.googleapis.com/v1/projects/guiasense-9de16/locations/us-central1/repositories/gcf-artifacts [none]
+[debug] [2026-06-18T03:29:38.974Z] <<< [apiv2][status] GET https://artifactregistry.googleapis.com/v1/projects/guiasense-9de16/locations/us-central1/repositories/gcf-artifacts 200
+[debug] [2026-06-18T03:29:38.975Z] <<< [apiv2][body] GET https://artifactregistry.googleapis.com/v1/projects/guiasense-9de16/locations/us-central1/repositories/gcf-artifacts {"name":"projects/guiasense-9de16/locations/us-central1/repositories/gcf-artifacts","format":"DOCKER","description":"This repository is created and used by Cloud Functions for storing function docker images.","labels":{"goog-managed-by":"cloudfunctions"},"createTime":"2026-06-18T03:28:52.554449Z","updateTime":"2026-06-18T03:28:52.554449Z","mode":"STANDARD_REPOSITORY","vulnerabilityScanningConfig":{"lastEnableTime":"2026-06-18T03:28:43.548114935Z","enablementState":"SCANNING_DISABLED","enablementStateReason":"API containerscanning.googleapis.com is not enabled."},"satisfiesPzi":true,"registryUri":"us-central1-docker.pkg.dev/guiasense-9de16/gcf-artifacts"}
+[warn] !  functions: No cleanup policy detected for repositories in us-central1. This may result in a small monthly bill as container images accumulate over time. 
+[info] i  functions: Configuring cleanup policy for repository in us-central1. Images older than 1 days will be automatically deleted. 
+[debug] [2026-06-18T03:32:08.573Z] Setting up artifact cleanup policy for region us-central1
+[debug] [2026-06-18T03:32:08.581Z] Checked if tokens are valid: true, expires at: 1781755705874
+[debug] [2026-06-18T03:32:08.581Z] Checked if tokens are valid: true, expires at: 1781755705874
+[debug] [2026-06-18T03:32:08.582Z] >>> [apiv2][query] PATCH https://artifactregistry.googleapis.com/v1/projects/guiasense-9de16/locations/us-central1/repositories/gcf-artifacts updateMask=name%2CcleanupPolicies%2CcleanupPolicyDryRun%2Clabels
+[debug] [2026-06-18T03:32:08.582Z] >>> [apiv2][body] PATCH https://artifactregistry.googleapis.com/v1/projects/guiasense-9de16/locations/us-central1/repositories/gcf-artifacts {"name":"projects/guiasense-9de16/locations/us-central1/repositories/gcf-artifacts","cleanupPolicies":{"firebase-functions-cleanup":{"id":"firebase-functions-cleanup","condition":{"tagState":"ANY","olderThan":"86400s"},"action":"DELETE"}},"cleanupPolicyDryRun":false,"labels":{"goog-managed-by":"cloudfunctions"}}
+[debug] [2026-06-18T03:32:09.851Z] <<< [apiv2][status] PATCH https://artifactregistry.googleapis.com/v1/projects/guiasense-9de16/locations/us-central1/repositories/gcf-artifacts 200
+[debug] [2026-06-18T03:32:09.876Z] <<< [apiv2][body] PATCH https://artifactregistry.googleapis.com/v1/projects/guiasense-9de16/locations/us-central1/repositories/gcf-artifacts {"name":"projects/guiasense-9de16/locations/us-central1/repositories/gcf-artifacts","format":"DOCKER","description":"This repository is created and used by Cloud Functions for storing function docker images.","labels":{"goog-managed-by":"cloudfunctions"},"createTime":"2026-06-18T03:28:52.554449Z","updateTime":"2026-06-18T03:32:09.905364Z","mode":"STANDARD_REPOSITORY","cleanupPolicies":{"firebase-functions-cleanup":{"id":"firebase-functions-cleanup","action":"DELETE","condition":{"tagState":"ANY","olderThan":"86400s"}}},"vulnerabilityScanningConfig":{"lastEnableTime":"2026-06-18T03:28:43.548114935Z","enablementState":"SCANNING_DISABLED","enablementStateReason":"API containerscanning.googleapis.com is not enabled."},"satisfiesPzi":true}
+[info] i  functions: Configured cleanup policy for repository in us-central1. 
+[debug] [2026-06-18T03:32:09.876Z] Functions deploy failed.
+[debug] [2026-06-18T03:32:09.877Z] {
+  "endpoint": {
+    "id": "describeEnvironment",
+    "project": "guiasense-9de16",
+    "region": "us-central1",
+    "entryPoint": "describeEnvironment",
+    "platform": "gcfv2",
+    "runtime": "nodejs24",
+    "httpsTrigger": {},
+    "labels": {
+      "deployment-tool": "cli-firebase"
+    },
+    "secretEnvironmentVariables": [
+      {
+        "key": "OPENAI_KEY",
+        "secret": "OPENAI_KEY",
+        "projectId": "guiasense-9de16",
+        "version": "1"
+      }
+    ],
+    "serviceAccount": null,
+    "ingressSettings": null,
+    "availableMemoryMb": null,
+    "timeoutSeconds": null,
+    "maxInstances": null,
+    "minInstances": null,
+    "concurrency": 80,
+    "vpc": null,
+    "environmentVariables": {
+      "FIREBASE_CONFIG": "{\"projectId\":\"guiasense-9de16\",\"storageBucket\":\"guiasense-9de16.firebasestorage.app\"}",
+      "GCLOUD_PROJECT": "guiasense-9de16",
+      "EVENTARC_CLOUD_EVENT_SOURCE": "projects/guiasense-9de16/locations/us-central1/services/describeEnvironment"
+    },
+    "codebase": "default",
+    "cpu": 1,
+    "targetedByOnly": false,
+    "hash": "b09f61b83d82c66d289f2d52def444f9a24d7a12"
+  },
+  "op": "create",
+  "original": {
+    "name": "FirebaseError",
+    "children": [],
+    "exit": 1,
+    "message": "Build failed with status: FAILURE. Could not build the function due to a missing permission on the build service account. If you didn't revoke that permission explicitly, this could be caused by a change in the organization policies. Please refer to the following documentation for more details and resolution: https://cloud.google.com/functions/docs/troubleshooting#build-service-account\n You can also view the logs at https://console.cloud.google.com/cloud-build/builds;region=us-central1/95bb6203-4caa-48db-bab3-ac137aec8265?project=106882005904.\n",
+    "original": {
+      "code": 3,
+      "message": "Build failed with status: FAILURE. Could not build the function due to a missing permission on the build service account. If you didn't revoke that permission explicitly, this could be caused by a change in the organization policies. Please refer to the following documentation for more details and resolution: https://cloud.google.com/functions/docs/troubleshooting#build-service-account\n You can also view the logs at https://console.cloud.google.com/cloud-build/builds;region=us-central1/95bb6203-4caa-48db-bab3-ac137aec8265?project=106882005904.\n"
+    },
+    "status": 3,
+    "code": 3
+  }
+}
+[debug] [2026-06-18T03:32:14.909Z] Error: Timed out.
+    at Timeout._onTimeout (C:\Users\kamil\AppData\Roaming\npm\node_modules\firebase-tools\lib\utils.js:313:49)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7)
+[error] 
+[error] Error: An unexpected error has occurred.
